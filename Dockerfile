@@ -1,5 +1,7 @@
 FROM node:12  
 
+
+
 WORKDIR /WsMvnoApiConsola
 
 COPY package*.json ./
@@ -7,6 +9,14 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+
+RUN adduser node root
+
+RUN chown -R node:node /WsMvnoApiConsola
+
+USER 1000
+
+RUN chmod -R 775 /WsMvnoApiConsola
 
 EXPOSE 3009
 
