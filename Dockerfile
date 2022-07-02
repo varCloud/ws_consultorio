@@ -13,7 +13,7 @@ WORKDIR /WsMvnoApiConsola
 RUN chmod -R 775 /WsMvnoApiConsola
 RUN chown -R node:root /WsMvnoApiConsola
 
-EXPOSE 80
+EXPOSE 30000
 
 CMD ["npm", "start"]
 
